@@ -1,0 +1,115 @@
+.welcome {
+    background-color: var(--bg-primary);
+    color: var(--text-light);
+    height: 30vh;
+    position: relative;
+    width: 100%;
+    top: 0;
+    display: flex;
+}
+
+.welcome h1 {
+    text-align: center;
+    }
+
+.welcome .container {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .welcome .container {
+        font-size: 30px;
+    }
+}
+
+.trainers .container.grid {
+    padding: var(--spacing-medium) var(--spacing-small);
+    }
+
+
+
+
+.trainers .trainers-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: var(--spacing-large);
+    flex-direction: row;
+    height: auto;
+    margin-top: 50px;
+}
+
+.trainers .trainer {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 30px 10px 10px 10px;
+    padding: 10px;
+    min-height: 450px;
+}
+
+.trainers .trainer-wrapper {
+    width: 25%;
+    padding: 0 var(--spacing-small);
+
+}
+
+.trainers .image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 350px;
+}
+
+.trainers .trainer img {
+    width: 200px;
+    height: 200px;
+    filter: grayscale(100%);
+    padding: 20px;
+    border-radius: 50%;
+    margin-top: -60px;
+}
+
+.trainers .image-wrapper h3 {
+    background-color: var(--bg-primary);
+    font-size: var(--fs-large);
+    text-align: center;
+    border-radius: 5px;
+    margin-top: -25px;
+    width: 100%;
+    opacity: 80%;
+    padding: var(--spacing-tiny) 0;
+    margin-bottom: var(--spacing-medium);
+}
+
+.trainers .image-wrapper p {
+    text-align: center;
+    }
+
+@media (max-width: 1200px) {
+    .trainers .trainer-wrapper {
+        width: 25%;
+    }
+}
+
+@media (max-width: 992px) {
+    .trainers .trainer-wrapper {
+        width: 33%;
+    }
+}
+
+@media (max-width: 768px) {
+    .trainers .trainer-wrapper {
+        width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .trainers .trainer-wrapper {
+        width: 100%;
+    }
+}
+

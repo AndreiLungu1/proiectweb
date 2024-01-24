@@ -1,0 +1,245 @@
+/* Adaugam variabile */
+:root {
+    --text-primary: #101d42;
+    --text-secondary: #fbb44c;
+    --text-dark: #2b2922;
+    --text-light: #eaeaea;
+    --text-white: #ffffff;
+
+    --bg-primary: #141e4c;
+    --bg-secondary: #dfedf5;
+    --bg-dark: #101d42;
+    --bg-light: #ffffff;
+
+    --button-color: #2bb686;
+
+    --spacing-xl: 42px;
+    --spacing-large: 28px;
+    --spacing-medium: 16px;
+    --spacing-small: 8px;
+    --spacing-tiny: 4px;
+
+
+    --fs-large: 16px;
+    --fs-medium: 14px;
+    --fs-small: 12px;
+
+    --mobile-logo-height: 45px;
+
+
+
+}
+
+
+
+
+/* Resetam proprietatile de baza ale browser-ului */
+* {
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+
+
+/* Adaugam proprietati legate de font */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 56px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    font-size: var(--fs-medium);
+}
+
+/* Adaugam proprietatile de culoare */
+
+h1 {
+    color: var(--text-light);
+}
+
+h2 {
+    color: var(--text-primary);
+}
+
+h3 {
+    color: var(--text-secondary);
+}
+
+p {
+    color: var(--text-dark);
+}
+
+/* Clasa container care este reutilizabila in toate fisierele de HTML */
+.container {
+    max-width: 1200px;
+    min-width: 320px;
+    padding: var(--spacing-medium);
+    margin: auto;
+}
+
+/* Stilizam header-ul */
+header {
+    background-color: var(--bg-primary);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    height: 60px;
+    width: auto;
+}
+
+/* Stilizam meniul  */
+nav ul {
+    display: flex;
+}
+
+nav a {
+    font-size: var(--fs-small);
+    color: var(--text-light);
+    padding: var(--spacing-medium);
+    text-transform: uppercase;
+}
+
+nav li {
+    position: relative;
+}
+
+nav .arrow-down-icon {
+    position: absolute;
+    font-size: var(--fs-large);
+    top: 16px;
+    right: 0px;
+    color: var(--text-light);
+}
+
+nav a:hover {
+    color: var(--text-secondary);
+}
+
+nav .submenu {
+    display: none;
+    width: 160px;
+    background-color: var(--bg-dark);
+    padding: var(--spacing-tiny);
+    position: absolute;
+    top: calc(100% - var(--spacing-medium));
+    left: 0px;
+}
+
+nav .about-us:hover .submenu {
+    display: block;
+}
+
+nav .menu-icon, input[type="checkbox"] {
+    display: none;
+}
+
+footer  {
+  background-color: var(--bg-dark);
+}
+footer .container p {
+    color: var(--text-light);
+    text-align: center;
+    font-size: var(--fs-small);
+    padding: var(--spacing-medium) 0;
+}
+
+/* Stilizm pe mobile */
+@media (max-width:768px) {
+    nav img {
+       height: var(--mobile-logo-height);
+    }
+    nav ul {
+        display: none;
+    }
+    nav .menu-icon {
+        display: block;
+        color: var(--text-light);
+    }
+    nav .menu-icon-container {
+        position: relative;
+    }
+    nav input[type="checkbox"] {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    nav input[type="checkbox"]:checked ~ ul {
+        display: block;
+        width: 100%;
+        background-color: var(--bg-dark) ;
+        position: fixed;
+        left: 0;
+        top: calc(var(--mobile-logo-height) + 3 * var(--spacing-medium));
+    }
+
+    nav .arrow-down-icon, nav .about-us:hover .submenu {
+        display: none;
+    }
+
+}
+
+.welcome {
+    background-color: var(--bg-primary);
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.welcome h1, .welcome p {
+    color: var(--text-white);
+}
+
+.welcome p {
+    font-size: var(--fs-large);
+    margin-bottom: var(--spacing-medium);
+}
+
+.welcome p:last-of-type {
+    margin-bottom: var(--spacing-medium);
+}
